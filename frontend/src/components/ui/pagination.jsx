@@ -66,7 +66,7 @@ function PaginationPrevious({
     <PaginationLink
       aria-label="Go to previous page"
       size="default"
-      className={cn("pl-1.5!", className)}
+      className={cn("!pl-1.5", className)}
       {...props}>
       <ChevronLeftIcon data-icon="inline-start" />
       <span className="hidden sm:block">{text}</span>
@@ -83,7 +83,7 @@ function PaginationNext({
     <PaginationLink
       aria-label="Go to next page"
       size="default"
-      className={cn("pr-1.5!", className)}
+      className={cn("!pr-1.5", className)}
       {...props}>
       <span className="hidden sm:block">{text}</span>
       <ChevronRightIcon data-icon="inline-end" />
