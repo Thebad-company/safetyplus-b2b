@@ -48,8 +48,8 @@ const FloatingCTA = () => {
               </div>
             </motion.div>
 
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="rounded-full shadow-2xl h-14 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold flex items-center gap-2 group"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >

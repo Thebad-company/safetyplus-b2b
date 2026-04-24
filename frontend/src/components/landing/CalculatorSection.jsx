@@ -52,7 +52,7 @@ export default function CalculatorSection() {
                                 <div className="space-y-6">
                                     <div className="flex justify-between items-center">
                                         <label className="text-sm font-bold text-foreground uppercase tracking-widest">Workforce Size</label>
-                                        <span className="text-2xl font-black text-primary tracking-tighter">{employees} <span className="text-xs text-muted-foreground uppercase">Staff</span></span>
+                                        <span className="text-2xl font-black text-slate-900 tracking-tighter">{employees} <span className="text-xs text-muted-foreground uppercase">Staff</span></span>
                                     </div>
                                     <Slider
                                         value={[employees]}
@@ -60,7 +60,7 @@ export default function CalculatorSection() {
                                         min={10}
                                         max={500}
                                         step={10}
-                                        className="py-4"
+                                        className="py-4 [&_[role=slider]]:bg-primary [&_[role=slider]]:border-primary [&_.relative]:bg-zinc-200 [&_.absolute]:bg-primary h-1.5"
                                     />
                                     <div className="flex justify-between text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
                                         <span>10 Staff</span>
@@ -71,7 +71,7 @@ export default function CalculatorSection() {
                                 <div className="space-y-6">
                                     <div className="flex justify-between items-center">
                                         <label className="text-sm font-bold text-foreground uppercase tracking-widest">Monthly PPE Spend</label>
-                                        <span className="text-2xl font-black text-primary tracking-tighter">£{monthlySpend.toLocaleString()}</span>
+                                        <span className="text-2xl font-black text-slate-900 tracking-tighter">£{monthlySpend.toLocaleString()}</span>
                                     </div>
                                     <Slider
                                         value={[monthlySpend]}
@@ -79,7 +79,7 @@ export default function CalculatorSection() {
                                         min={500}
                                         max={20000}
                                         step={250}
-                                        className="py-4"
+                                        className="py-4 [&_[role=slider]]:bg-primary [&_[role=slider]]:border-primary [&_.relative]:bg-zinc-200 [&_.absolute]:bg-primary h-1.5"
                                     />
                                     <div className="flex justify-between text-[10px] font-bold text-zinc-400 uppercase tracking-widest">
                                         <span>£500 /mo</span>
@@ -109,7 +109,7 @@ export default function CalculatorSection() {
                                     {[
                                         { label: "Annual Savings", value: `£${results.annualSaving.toLocaleString()}`, icon: PoundSterling, color: "bg-primary", iconColor: "text-white" },
                                         { label: "Procurement Efficiency", value: `${results.savingsPercent}%`, icon: TrendingDown, color: "bg-green-500", iconColor: "text-white" },
-                                        { label: "Supplier Consolidation", value: `${results.supplierReduction} → 1`, icon: Building, color: "bg-blue-600", iconColor: "text-white" }
+                                        { label: "Training Value Added", value: "£1,499 Included", icon: Calculator, color: "bg-zinc-900", iconColor: "text-white" }
                                     ].map((res, i) => (
                                         <motion.div 
                                             key={res.label}
@@ -123,7 +123,7 @@ export default function CalculatorSection() {
                                                 <res.icon className={`w-7 h-7 ${res.iconColor}`} />
                                             </div>
                                             <div>
-                                                <div className="text-3xl font-black text-foreground tracking-tighter">{res.value}</div>
+                                                <div className="text-3xl font-black text-slate-900 tracking-tighter">{res.value}</div>
                                                 <div className="text-xs font-bold text-muted-foreground uppercase tracking-widest">{res.label}</div>
                                             </div>
                                         </motion.div>

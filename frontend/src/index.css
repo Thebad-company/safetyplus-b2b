@@ -12,33 +12,34 @@
     --font-inter: 'Inter', sans-serif;
 
     --background: oklch(1 0 0);
-    --foreground: oklch(0 0 0); /* Pure Black for crispness */
-    
+    --foreground: oklch(0 0 0);
+    /* Pure Black for crispness */
+
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.1 0 0);
-    
+
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.1 0 0);
-    
-    --primary: oklch(0.4 0.2 255); /* Deep Professional Blue */
+
+    --primary: oklch(0.45 0.2 255); /* Sharp Professional Blue */
     --primary-foreground: oklch(1 0 0);
     
-    --secondary: oklch(0.95 0.02 255);
+    --secondary: oklch(0.96 0.01 255);
     --secondary-foreground: oklch(0.2 0.05 255);
     
-    --muted: oklch(0.95 0.02 255);
+    --muted: oklch(0.96 0.01 255);
     --muted-foreground: oklch(0.4 0.05 255);
     
-    --accent: oklch(0.55 0.25 255); /* Vibrant Brand Blue */
+    --accent: oklch(0.55 0.25 255); /* Vibrant Corporate Blue */
     --accent-foreground: oklch(1 0 0);
     
-    --destructive: oklch(0.4 0.2 255); /* Replaced red with Blue */
+    --destructive: oklch(0.4 0.2 25); 
     --destructive-foreground: oklch(1 0 0);
     
-    --border: oklch(0.9 0 0);
-    --input: oklch(0.9 0 0);
-    --ring: oklch(0.4 0.2 255);
-    
+    --border: oklch(0.92 0 0);
+    --input: oklch(0.92 0 0);
+    --ring: oklch(0.45 0.2 255);
+
     --radius: 0.625rem;
   }
 

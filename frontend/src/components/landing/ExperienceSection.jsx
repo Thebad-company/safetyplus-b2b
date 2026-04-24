@@ -44,8 +44,8 @@ export default function ExperienceSection() {
                         transition={{ duration: 0.6 }}
                     >
                         <span className="text-accent font-semibold text-sm uppercase tracking-widest">Our Legacy</span>
-                        <h2 className="mt-4 text-4xl md:text-5xl font-extrabold text-primary leading-tight">
-                            Over Three Decades of <span className="text-accent">Industrial Excellence</span>
+                        <h2 className="mt-4 text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                            Over Three Decades of <span className="text-primary italic">Industrial Excellence</span>
                         </h2>
                         <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                             Since 1988, GHC (UK) LTD T/A Safety Plus has been at the forefront of workplace safety.
@@ -91,7 +91,7 @@ export default function ExperienceSection() {
                                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
                                     <stat.icon className="w-6 h-6" />
                                 </div>
-                                <div className="text-3xl font-extrabold text-primary mb-1">{stat.value}</div>
+                                <div className="text-3xl font-extrabold text-slate-900 mb-1">{stat.value}</div>
                                 <div className="text-sm font-bold text-accent uppercase tracking-wider mb-3">{stat.label}</div>
                                 <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
                             </motion.div>

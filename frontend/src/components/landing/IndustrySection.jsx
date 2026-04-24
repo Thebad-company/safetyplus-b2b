@@ -46,49 +46,62 @@ export default function IndustrySection() {
                     </p>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="grid lg:grid-cols-3 gap-10">
                     {industries.map((ind, i) => (
                         <motion.div
                             key={ind.title}
                             initial={{ opacity: 0, y: 50 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-100px" }}
-                            transition={{ duration: 0.8, delay: i * 0.15, ease: [0.21, 0.45, 0.32, 0.9] }}
-                            whileHover={{ y: -10 }}
-                            className="group bg-white rounded-3xl border border-zinc-100 overflow-hidden shadow-sm hover:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.1)] transition-all duration-500"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: i * 0.1 }}
+                            className="group relative bg-white rounded-[2rem] border border-zinc-100 overflow-hidden hover:border-primary/20 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500"
                         >
-                            <div className="relative h-56 overflow-hidden">
+                            <div className="relative h-64 overflow-hidden">
                                 <motion.img 
                                     whileHover={{ scale: 1.1 }}
-                                    transition={{ duration: 0.8 }}
+                                    transition={{ duration: 1.5, ease: "easeOut" }}
                                     src={ind.image} 
                                     alt={`${ind.title} industry`} 
                                     className="w-full h-full object-cover" 
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                                <h3 className="absolute bottom-6 left-6 text-2xl font-black text-white">{ind.title}</h3>
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                                <div className="absolute bottom-6 left-8 right-8">
+                                    <h3 className="text-3xl font-black text-white tracking-tight">{ind.title}</h3>
+                                    <div className="w-12 h-1 bg-primary mt-3 transition-all duration-500 group-hover:w-full"></div>
+                                </div>
                             </div>
-                            <div className="p-8 space-y-6">
-                                <div>
-                                    <div className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-2">The Challenge</div>
-                                    <p className="text-sm text-foreground font-medium leading-relaxed">{ind.problem}</p>
-                                </div>
-                                <div>
-                                    <div className="text-[10px] font-bold text-blue-600 uppercase tracking-[0.2em] mb-2">Our Solution</div>
-                                    <p className="text-sm text-muted-foreground leading-relaxed">{ind.solution}</p>
-                                </div>
-                                <div className="pt-6 border-t border-zinc-100 flex items-center justify-between">
-                                    <div>
-                                        <div className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mb-1">Estimated Savings</div>
-                                        <div className="text-xl font-black text-primary tracking-tighter">{ind.savings}</div>
+
+                            <div className="p-8 lg:p-10 space-y-8">
+                                <div className="space-y-3">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></div>
+                                        <div className="text-[11px] font-black text-rose-600 uppercase tracking-[0.25em]">The Challenge</div>
                                     </div>
-                                    <motion.button
-                                        whileHover={{ x: 5 }}
+                                    <p className="text-sm text-slate-700 font-bold leading-relaxed">{ind.problem}</p>
+                                </div>
+
+                                <div className="space-y-3">
+                                    <div className="flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                                        <div className="text-[11px] font-black text-primary uppercase tracking-[0.25em]">Our Solution</div>
+                                    </div>
+                                    <p className="text-sm text-slate-500 font-medium leading-relaxed">{ind.solution}</p>
+                                </div>
+
+                                <div className="pt-8 border-t border-zinc-100">
+                                    <div className="flex flex-col mb-6">
+                                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Projected ROI</span>
+                                        <span className="text-2xl font-black text-slate-900 tracking-tighter">{ind.savings}</span>
+                                    </div>
+                                    
+                                    <Button
+                                        variant="outline"
+                                        className="w-full h-14 rounded-xl border-zinc-200 hover:border-primary hover:bg-primary/5 hover:text-primary font-bold text-sm flex items-center justify-center gap-2 transition-all duration-300"
                                         onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                                        className="text-primary font-bold text-sm flex items-center gap-2 group/btn"
                                     >
-                                        Case Study <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                                    </motion.button>
+                                        View Case Study 
+                                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    </Button>
                                 </div>
                             </div>
                         </motion.div>

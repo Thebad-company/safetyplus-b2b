@@ -39,7 +39,12 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <Button className="hidden sm:inline-flex">Get Quote</Button>
+          <Button 
+            className="hidden sm:inline-flex h-11 px-8 bg-rose-600 hover:bg-rose-700 text-white font-black tracking-tight"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
+            Get Quote
+          </Button>
           
           {/* Mobile Nav */}
           <Sheet>
